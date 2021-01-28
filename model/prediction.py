@@ -178,7 +178,7 @@ def localize(net,im):
     
     contours,_ = cv.findContours(im_gray, cv.RETR_TREE, cv.CHAIN_APPROX_NONE)
     cv.drawContours(contour, contours, -1, (0,0,255), 3)
-    im_rgb = cv2.cvtColor(contour, cv2.COLOR_BGR2RGB)
+    im_rgb = cv.cvtColor(contour, cv.COLOR_BGR2RGB)
     #cv.imwrite("BB"+str(i)+".png",contour)
     
     return im_rgb
