@@ -216,9 +216,11 @@ def classify(net,im):
     return prediction 
 
 def predict(data,net):
-    image = Image.open(data)
-    image = np.array(image)
-    im = image.astype('float32')
+    npimg = np.fromstring(data, np.uint8)
+    im = cv.imdecode(npimg,cv.IMREAD_COLOR)
+    #image = Image.open(data)
+    #image = np.array(image)
+    #im = image.astype('float32')
     y = classify(net,im)
     print("y",y)
     
