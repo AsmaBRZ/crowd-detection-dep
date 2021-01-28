@@ -178,7 +178,7 @@ def localize(net,im):
     
     contours,_ = cv.findContours(im_gray, cv.RETR_TREE, cv.CHAIN_APPROX_NONE)
     cv.drawContours(contour, contours, -1, (0,0,255), 3)
-    cv.imwrite("BB"+str(i)+".png",contour)
+    #cv.imwrite("BB"+str(i)+".png",contour)
     
     return contour
 
