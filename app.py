@@ -18,6 +18,7 @@ def photoRecognize():
             cv.dnn_registerLayer('Crop', CropLayer)
             net = cv.dnn.readNet("/app/model/deploy.prototxt", "/app/model/hed_pretrained_bsds.caffemodel")
             prediction = predict(data,net)
+            cv.dnn_unregisterLayer('Crop')
     else:
       return render_template('index.html')
 
