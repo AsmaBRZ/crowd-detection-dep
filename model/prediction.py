@@ -11,7 +11,7 @@ import io
 #modelPath = join(dirname(__file__), "hed_pretrained_bsds.caffemodelor")
 
 
-threshold_mask = 0.7 #85%
+threshold_mask = 0.75 #85%
 threshold_FD = 1.75
 # parser = argparse.ArgumentParser()
 # parser.add_argument('--prototxt', help='Path to deploy.prototxt',default='deploy.prototxt', required=False)
