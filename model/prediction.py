@@ -216,7 +216,8 @@ def classify(net,im):
     return prediction 
 
 def predict(data,net):
-    npimg = np.fromstring(data, np.uint8)
+    file = data.read()
+    npimg = np.fromstring(file, np.uint8)
     im = cv.imdecode(npimg,cv.IMREAD_COLOR)
     #image = Image.open(data)
     #image = np.array(image)
